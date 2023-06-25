@@ -66,7 +66,7 @@ export const getPromiseRaw = (
               if (windowObject.__ever) {
                 clearInterval(interval);
                 resolve(windowObject.__ever);
-              } else if (nTries > 0) {
+              } else if (nTries > 4) {
                 nTries--;
               } else {
                 clearInterval(interval);
