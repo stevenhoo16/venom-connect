@@ -36,12 +36,12 @@ export const getPromiseRaw = (
               resolve(windowObject.__venom);
               return;
             }
-            let nTries = 0; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
+            let nTries = 4; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
             let interval = setInterval(() => {
               if (windowObject.__venom) {
                 clearInterval(interval);
                 resolve(windowObject.__venom);
-              } else if (nTries > 0) {
+              } else if (nTries > 4) {
                 nTries--;
               } else {
                 clearInterval(interval);
@@ -61,12 +61,12 @@ export const getPromiseRaw = (
               resolve(windowObject.__ever);
               return;
             }
-            let nTries = 0; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
+            let nTries = 4; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
             let interval = setInterval(() => {
               if (windowObject.__ever) {
                 clearInterval(interval);
                 resolve(windowObject.__ever);
-              } else if (nTries > 0) {
+              } else if (nTries > 4) {
                 nTries--;
               } else {
                 clearInterval(interval);
@@ -87,12 +87,12 @@ export const getPromiseRaw = (
               resolve(windowObject.__oxy);
               return;
             }
-            let nTries = 0; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
+            let nTries = 4; // число попыток, иначе он будет бесконечно, может это вынести в конфиг
             let interval = setInterval(() => {
               if (windowObject.__oxy) {
                 clearInterval(interval);
                 resolve(windowObject.__oxy);
-              } else if (nTries > 0) {
+              } else if (nTries > 4) {
                 nTries--;
               } else {
                 clearInterval(interval);
